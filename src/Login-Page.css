@@ -100,17 +100,22 @@ color:#2A4147;
 
 .Nav_bar
 {
-    padding:30px;
     margin-left: 350px;
+    margin-top: 10px;
+    display: flex;
 }
 
-
-.Nav_bar > a
+.Nav_bar > img
 {
-    padding:60px;
+    margin-top: 26px;
+}
+
+.Nav_bar > div
+{
     font-size: 32px;
-    text-decoration: none;
     color:#2A4147;
+    padding:50px;
+
 }
 
 .Home_page > .Container
@@ -122,8 +127,8 @@ flex-direction: column;}
 {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 200px;
-    margin-top: 60px;
+    margin-left: 150px;
+    margin-top: 20px;
 
 }
 
