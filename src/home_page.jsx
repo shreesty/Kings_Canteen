@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Kings_logo from './Images/kings_logo.png';
+import Logout_logo from './Images/log-out.png';
 import { Link } from 'react-router-dom';
+import Cart_logo from './Images/Cart_icon.png';
 
 function Home_Page() {
   const [currentCategory, setCurrentCategory] = useState("All"); 
@@ -202,6 +204,9 @@ function Home_Page() {
           <div className="Non-veg" onClick={() => setCurrentCategory("non-veg")}>Non-Veg</div>
           <div className="Veg" onClick={() => setCurrentCategory("veg")}>Veg</div>
           <div className="Drinks" onClick={() => setCurrentCategory("drinks")}>Drinks</div>
+          <img className="Cart_icon"src={Cart_logo} height={55}></img>
+          <img className="Logout_icon"src={Logout_logo} height={90}></img>
+
         </div>
 
 

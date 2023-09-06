@@ -118,6 +118,19 @@ color:#2A4147;
 
 }
 
+.Nav_bar > .Cart_icon
+{
+    margin-top: 40px;
+    margin-left: 50px;
+
+}
+
+.Nav_bar > .Logout_icon
+{
+    margin-left: 50px;
+}
+
+
 
 .Home_page > .Container
 {
