@@ -5,7 +5,6 @@ import WebFont from 'webfontloader';
 import Home_Page from './home_page';
 import { Routes, Route } from 'react-router-dom';
 import Cart_Page from './Cart_Page';
-import Menu from './Menu';
 
 
 WebFont.load({
