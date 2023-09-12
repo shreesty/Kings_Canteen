@@ -25,8 +25,9 @@ function App() {
   <Route path="home/shistiiii/Documents/shistii/Kings_Canteen/src/Cart_Page.jsx" element={<Cart_Page/>} />
 
   </Routes>
-
+  {/* <Cart_Page></Cart_Page> */}
     </>
+
 
   )
 }

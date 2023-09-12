@@ -83,8 +83,7 @@ color:#2A4147;
     background-color:#2A414782;
     border-radius: 10px;
  
-}   
-
+}
 
 .Home_page
 {
@@ -118,13 +117,18 @@ color:#2A4147;
 
 }
 
-.Nav_bar > .Cart_icon
+.Nav_bar > ul > li > img
 {
-    margin-top: 40px;
-    margin-left: 50px;
-
+    margin-top: 50px;
+    /* margin-left: 50px; */
 }
 
+.Nav_bar > ul > li
+{
+    list-style: none;
+    margin-left: 30px;
+    
+}
 .Nav_bar > .Logout_icon
 {
     margin-left: 50px;
@@ -188,7 +192,7 @@ flex-direction: column;}
 
 }
 
-.All_Menu > .items > .quant > .btn
+ .quant > .btn
 {
     height: 20px;
     width: 20px;
@@ -205,20 +209,13 @@ flex-direction: column;}
     height:35px;
     background-color:#4d717b;
 }
-.Add_to_Cart > ul 
+.Add_to_Cart > div
 {
-    list-style: none;
     margin-top: 5px;
-    margin-right: 35px;
-
-}
-.Add_to_Cart > ul > li > a
-{
-    text-decoration: none;
+    align-items: center;
     color:#F5F5F5;
     font-size: 18px;
 }
-
 
 .Add_to_Cart:hover
 {
@@ -226,3 +223,102 @@ flex-direction: column;}
     background-color: #2A4147;
     font-weight: bold;
 }
+
+.Cart_Page
+{
+    /* background-color: #D39D9D; */
+    margin-top: 50px;
+}
+
+.Cart_container
+{
+    margin: 50px;
+    
+}
+
+.Cart_Nav
+{
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.Item_headers
+{
+    display: flex;
+    justify-content:space-between;
+}
+.Item_headers > h4
+{
+    font-size: 24px;
+}
+
+.Item_component > .items
+{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    border-top: 0.5px solid black;
+    color:#2A4147;
+
+}
+.Item_component > .items > h4
+{
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.Item_component > .items > h3
+{
+    margin-left: 250px;
+}
+.Item_component > .items > .quant
+{
+    display: flex;
+    margin-left: 400px;
+
+}
+
+.items > .quant > .quantity
+{
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.items > .quant > .btn
+{
+    text-align: center;
+}
+
+.Total,.item_title,.item_price
+{
+    margin-top: 50px;
+}
+.item_price
+{
+    margin-right: 120px;
+}
+
+.Grand_total
+{
+    float: right;
+}
+
+.Close_button
+{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.Back_button
+{
+    margin-left: 15px;
+}
+
+.Cart_Page > ul > li{
+    list-style: none;
+
+}
+
+
+

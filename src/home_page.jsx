@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Cart_logo from './Images/Cart_icon.png';
 
 function Home_Page() {
-  const [currentCategory, setCurrentCategory] = useState("All"); 
+  const [currentCategory, setCurrentCategory] = useState("All");
 
   const [Menu] = useState([
     {
@@ -154,7 +154,7 @@ function Home_Page() {
   ])
 
   const [itemCounts, setItemCounts] = useState(Menu.reduce((acc, item) => {
-    acc[item.title] = 1; // Initialize each item's count to 1
+    acc[item.title] = 1;
     return acc;
   }, {}));
 
@@ -198,44 +198,50 @@ function Home_Page() {
 
         </div>
         <div className="Container">
-        <div className="Nav_bar">
-          <img src={Kings_logo} height={60} width={40} />
-          <div className="All" onClick={() => setCurrentCategory("All")}>All</div>
-          <div className="Non-veg" onClick={() => setCurrentCategory("non-veg")}>Non-Veg</div>
-          <div className="Veg" onClick={() => setCurrentCategory("veg")}>Veg</div>
-          <div className="Drinks" onClick={() => setCurrentCategory("drinks")}>Drinks</div>
-          <img className="Cart_icon"src={Cart_logo} height={55}></img>
-          <img className="Logout_icon"src={Logout_logo} height={90}></img>
+          <div className="Nav_bar">
+            <img src={Kings_logo} height={60} width={40} />
+            <div className="All" onClick={() => setCurrentCategory("All")}>All</div>
+            <div className="Non-veg" onClick={() => setCurrentCategory("non-veg")}>Non-Veg</div>
+            <div className="Veg" onClick={() => setCurrentCategory("veg")}>Veg</div>
+            <div className="Drinks" onClick={() => setCurrentCategory("drinks")}>Drinks</div>
+            <ul>
+              <li>
+                <Link to="/home/shistiiii/Documents/shistii/Kings_Canteen/src/Cart_Page.jsx"><img className="Cart_icon" src={Cart_logo} height={55}></img></Link>
+                </li>
+            </ul>
+              
+            <ul>
+            <li>
+            <Link to="/"><img className="Logout_icon" src={Logout_logo} height={90}></img></Link>
 
-        </div>
+            </li>
+            </ul>
+
+          </div>
 
 
-        <div className="Menu">
-          {filterMenuByCategory(currentCategory).map((All_Menu, i) => (
-            <div key={i} className="All_Menu">
-              <img src={All_Menu.Image} height={150} width={150} />
-              <h1>{All_Menu.title}</h1>
-              <div className="items">
-                <div className="quant">
-                  <div className="btn" onClick={() => Decrement(All_Menu.title)}>-</div>
-                  <div>{itemCounts[All_Menu.title]}</div>
-                  <div className="btn" onClick={() => Increment(All_Menu.title)}>+</div>
+          <div className="Menu">
+            {filterMenuByCategory(currentCategory).map((All_Menu, i) => (
+              <div key={i} className="All_Menu">
+                <img src={All_Menu.Image} height={150} width={150} />
+                <h1>{All_Menu.title}</h1>
+                <div className="items">
+                  <div className="quant">
+                    <div className="btn" onClick={() => Decrement(All_Menu.title)}>-</div>
+                    <div>{itemCounts[All_Menu.title]}</div>
+                    <div className="btn" onClick={() => Increment(All_Menu.title)}>+</div>
+                  </div>
+                  <div className="price">Rs</div>
                 </div>
-                <div className="price">Rs</div>
+                <button className="Add_to_Cart">
+
+                  <div> Add to Cart </div>
+
+                </button>
               </div>
-              <button className="Add_to_Cart">
-                <ul>
-                  <li>
-                    <Link to="/home/shistiiii/Documents/shistii/Kings_Canteen/src/Cart_Page.jsx"> 
-                    Add to Cart
-                    </Link>
-                  </li>
-                </ul>
-              </button>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
       </div>
     </>
   )
@@ -243,3 +249,5 @@ function Home_Page() {
 
 
 export default Home_Page;
+
+
