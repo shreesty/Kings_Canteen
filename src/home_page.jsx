@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Kings_logo from './Images/kings_logo.png';
 import Logout_logo from './Images/log-out.png';
 import { Link } from 'react-router-dom';
-import Cart_logo from './Images/Cart_icon.png';
+import Cart_logo from './Images/Cart_icon1.png';
 
 function Home_Page() {
   const [currentCategory, setCurrentCategory] = useState("All");
@@ -199,22 +199,19 @@ function Home_Page() {
         </div>
         <div className="Container">
           <div className="Nav_bar">
-            <img src={Kings_logo} height={60} width={40} />
+            <img className="Kings_logo"src={Kings_logo} height={60} width={40} />
             <div className="All" onClick={() => setCurrentCategory("All")}>All</div>
             <div className="Non-veg" onClick={() => setCurrentCategory("non-veg")}>Non-Veg</div>
             <div className="Veg" onClick={() => setCurrentCategory("veg")}>Veg</div>
             <div className="Drinks" onClick={() => setCurrentCategory("drinks")}>Drinks</div>
+          
             <ul>
               <li>
-                <Link to="/home/shistiiii/Documents/shistii/Kings_Canteen/src/Cart_Page.jsx"><img className="Cart_icon" src={Cart_logo} height={60} ></img></Link>
-                <Link to="/"><img className="Logout_icon" src={Logout_logo} height={100}></img></Link>
+              <a><Link to="/home/shistiiii/Documents/shistii/Kings_Canteen/src/Cart_Page.jsx"><img className="Cart_icon" src={Cart_logo} height={85} width={60}></img></Link></a>
+                <a><Link to="/"><img className="Logout_icon" src={Logout_logo} height={100} width={100}></img></Link> </a>
 
                 </li>
             </ul>
-              
-           
-
-          
 
           </div>
 
