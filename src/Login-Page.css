@@ -126,13 +126,10 @@ color:#2A4147;
 .Nav_bar > ul > li
 {
     list-style: none;
-    margin-left: 30px;
-    
+    margin-left: 30px;  
 }
-.Nav_bar > .Logout_icon
-{
-    margin-left: 50px;
-}
+
+
 
 
 
@@ -243,15 +240,35 @@ flex-direction: column;}
 }
 
 
-.Item_headers
+.Items_headers
 {
     display: flex;
-    justify-content:space-between;
 }
-.Item_headers > h4
+.Items_headers > h4
 {
     font-size: 24px;
 }
+.Items_headers > .Item_header
+{
+    margin-left: 100px;
+}
+
+.Items_headers > .Price_header
+{
+    margin-left: 400px;
+}
+
+.Items_headers > .Quantity_header
+{
+    margin-left: 580px;
+}
+
+.Items_headers > .Total_header
+{
+    margin-left: 350px;
+}
+
+
 
 .Item_component > .items
 {

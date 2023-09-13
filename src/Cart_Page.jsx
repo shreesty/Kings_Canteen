@@ -62,11 +62,11 @@ function Cart_Page() {
           <h1>Your Cart</h1>
         </div>
         <div className="Cart_container">
-          <div className="Item_headers">
-            <h4>Items</h4>
-            <h4>Price</h4>
-            <h4 className="quantity_header">Quantity</h4>
-            <h4>Total</h4>
+          <div className="Items_headers">
+            <h4 className="Item_header">Items</h4>
+            <h4 className="Price_header">Price</h4>
+            <h4 className="Quantity_header">Quantity</h4>
+            <h4 className="Total_header">Total</h4>
           </div>
           <div className="Item_component">
             {items.map((item, index) => (

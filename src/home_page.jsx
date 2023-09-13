@@ -206,16 +206,15 @@ function Home_Page() {
             <div className="Drinks" onClick={() => setCurrentCategory("drinks")}>Drinks</div>
             <ul>
               <li>
-                <Link to="/home/shistiiii/Documents/shistii/Kings_Canteen/src/Cart_Page.jsx"><img className="Cart_icon" src={Cart_logo} height={55}></img></Link>
+                <Link to="/home/shistiiii/Documents/shistii/Kings_Canteen/src/Cart_Page.jsx"><img className="Cart_icon" src={Cart_logo} height={60} ></img></Link>
+                <Link to="/"><img className="Logout_icon" src={Logout_logo} height={100}></img></Link>
+
                 </li>
             </ul>
               
-            <ul>
-            <li>
-            <Link to="/"><img className="Logout_icon" src={Logout_logo} height={90}></img></Link>
+           
 
-            </li>
-            </ul>
+          
 
           </div>
 
