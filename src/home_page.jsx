@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Kings_logo from './Images/kings_logo.png';
-import Logout_logo from './Images/log-out.png';
+import Logout_logo from './Images/log-out.svg';
 import { Link } from 'react-router-dom';
-import Cart_logo from './Images/Cart_icon1.png';
+import Cart_logo from './Images/Cart_icon.svg';
 
 function Home_Page() {
   const [currentCategory, setCurrentCategory] = useState("All");
@@ -207,8 +207,8 @@ function Home_Page() {
           
             <ul>
               <li>
-              <a><Link to="/home/shistiiii/Documents/shistii/Kings_Canteen/src/Cart_Page.jsx"><img className="Cart_icon" src={Cart_logo} height={85} width={60}></img></Link></a>
-                <a><Link to="/"><img className="Logout_icon" src={Logout_logo} height={100} width={100}></img></Link> </a>
+              <a><Link to="/home/shistiiii/Documents/shistii/Kings_Canteen/src/Cart_Page.jsx"><img className="Cart_icon" src={Cart_logo} height={45} width={60}></img></Link></a>
+                <a><Link to="/"><img className="Logout_icon" src={Logout_logo} height={45} width={60}></img></Link> </a>
 
                 </li>
             </ul>

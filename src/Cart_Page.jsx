@@ -5,8 +5,10 @@ import close_icon from "./Images/close.png"
 import back_button from "./Images/back_button.png"
 
 function Cart_Page() {
-  const [itemCounts, setItemCounts] = useState({ "Chi Momo": 1, "Veg Momo": 1,
-  "Alo Chop": 1, });
+  const [itemCounts, setItemCounts] = useState({
+    "Chi Momo": 1, "Veg Momo": 1,
+    "Alo Chop": 1,
+  });
 
   const Increment = (title) => {
     const updatedCounts = { ...itemCounts };
@@ -22,6 +24,7 @@ function Cart_Page() {
     }
   };
 
+  
   const items = [
     {
       title: "Chi Momo",
@@ -46,17 +49,17 @@ function Cart_Page() {
     },
 
   ];
-  
+
   const grandTotal = items.reduce((acc, item) => acc + parseFloat(item.total.split(" ")[1]), 0);
   return (
     <>
       <div className="Cart_Page">
-      <ul>
-              <li>
-                <Link to="/home/shistiiii/Documents/shistii/Kings_Canteen/src/home_page.jsx"><img  className="Back_button"src={back_button} height={40}></img>
-</Link>
-              </li>
-            </ul>
+        <ul>
+          <li>
+            <Link to="/home/shistiiii/Documents/shistii/Kings_Canteen/src/home_page.jsx"><img className="Back_button" src={back_button} height={40}></img>
+            </Link>
+          </li>
+        </ul>
 
         <div className="Cart_Nav">
           <h1>Your Cart</h1>
@@ -76,11 +79,11 @@ function Cart_Page() {
                 <h3 className="item_price">{item.price}</h3>
                 <div className="quant">
                   <div className="btn" onClick={() => Decrement(item.title)}>-</div>
-                  <div className="quantity">{itemCounts[item.title]}</div> 
+                  <div className="quantity">{itemCounts[item.title]}</div>
                   <div className="btn" onClick={() => Increment(item.title)}>+</div>
                 </div>
                 <h3 className="Total">{item.total}</h3>
-                <img className="Close_button"src={close_icon} height={25}></img>
+                <img className="Close_button" src={close_icon} height={25}></img>
 
               </div>
             ))}
@@ -88,12 +91,21 @@ function Cart_Page() {
 
           <h1 className="Grand_total">Grand Total = Rs {grandTotal.toFixed(2)}</h1>
         </div>
-        <div className="Order_Now">
-              <button>Order Now</button>
-              </div>
+
+         <div className="Order_Now">
+          <ul>
+            <li>
+              <Link to="/home/shistiiii/Documents/shistii/Kings_Canteen/src/Order-page.jsx"><button>Order Now</button></Link>
+            </li>
+          </ul>
+
+        </div> 
       </div>
     </>
   );
 }
 
 export default Cart_Page;
+
+
+
