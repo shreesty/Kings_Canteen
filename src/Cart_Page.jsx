@@ -88,6 +88,9 @@ function Cart_Page() {
 
           <h1 className="Grand_total">Grand Total = Rs {grandTotal.toFixed(2)}</h1>
         </div>
+        <div className="Order_Now">
+              <button>Order Now</button>
+              </div>
       </div>
     </>
   );

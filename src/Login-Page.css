@@ -248,14 +248,10 @@ flex-direction: column;}
 {
     font-size: 24px;
 }
-.Items_headers > .Item_header
-{
-    margin-left: 100px;
-}
 
 .Items_headers > .Price_header
 {
-    margin-left: 400px;
+    margin-left: 500px;
 }
 
 .Items_headers > .Quantity_header
@@ -302,9 +298,11 @@ flex-direction: column;}
     font-size: 28px;
     font-weight: bold;
 }
-.items > .quant > .btn
+.items > .quant > .btn, .items > .quant > .quantity
 {
     text-align: center;
+    margin-top:50px ;
+    
 }
 
 .Total,.item_title,.item_price
@@ -336,6 +334,28 @@ flex-direction: column;}
     list-style: none;
 
 }
+.Order_Now
+{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.Order_Now > button
+{
+    height: 40px;
+    width:150px;
+    color:#F5F5F5;
+    text-align: center;
+    background-color:#4d717b;
+    font-size: 24px;
+    border-radius: 5px;
+}
 
-
+.Order_Now > button:hover
+{
+    color: #F5F5F5;
+    background-color: #2A4147;
+    font-weight: bold;
+}
