@@ -1,10 +1,30 @@
 import React from "react";
-import './Login-Page.css'
-import login from './Images/login.png'
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import './Login-Page.css';
+import login from './Images/login.png';
 import { Link } from 'react-router-dom';
+// import Hide_Password from './Images/hide.png';
+// import Show_Password from './Images/show.png';
+
 
 
 function Login_Page() {
+  const navigate = useNavigate()
+  const [input, setInput] = useState(
+    {
+      Name: '',
+      ID: '',
+    }
+  )
+  //Storing the Values in local Storage
+    const handleLogin = (e)=>
+    {
+      e.preventDefault();
+      const logged_user = localStorage.setItem("user", JSON.stringify(input))
+      navigate('/')
+    }
+
   return (
     <>
 
@@ -32,9 +52,33 @@ function Login_Page() {
 
           </div>
           <img src={login} />
-          <input className="Input" placeholder="Name" />
-          <input className="Input" placeholder="ID Number" />
-          <div className="Login-button">
+          <form>
+            <input
+              name='Name'
+              type="text"
+              value={input.Name}
+              onChange={(e) =>
+                setInput({
+                  ...input,
+                  [e.target.name]: e.target.value,
+                })
+              }
+
+              className="Input" placeholder="Name" />
+            <input
+              name='ID'
+              type="text"
+              value={input.ID}
+              onChange={(e) =>
+                setInput({
+                  ...input,
+                  [e.target.name]: e.target.value,
+                })
+              }
+
+              className="Input" placeholder="ID Number" />
+          </form>
+          <div onClick={handleLogin} className="Login-button">
             Login
           </div>
 

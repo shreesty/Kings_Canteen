@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Kings_logo from './Images/kings_logo.png';
-import Logout_logo from './Images/log-out.svg';
+import Logout_logo from './Images/logout.png';
 import { Link } from 'react-router-dom';
-import Cart_logo from './Images/Cart_icon.svg';
+import Cart_logo from './Images/cart_icon.png';
 
 function Home_Page() {
   const [currentCategory, setCurrentCategory] = useState("All");
@@ -199,18 +199,25 @@ function Home_Page() {
         </div>
         <div className="Container">
           <div className="Nav_bar">
-            <img className="Kings_logo"src={Kings_logo} height={60} width={40} />
+            <img className="Kings_logo" src={Kings_logo} height={60} width={40} />
             <div className="All" onClick={() => setCurrentCategory("All")}>All</div>
             <div className="Non-veg" onClick={() => setCurrentCategory("non-veg")}>Non-Veg</div>
             <div className="Veg" onClick={() => setCurrentCategory("veg")}>Veg</div>
             <div className="Drinks" onClick={() => setCurrentCategory("drinks")}>Drinks</div>
-          
+
             <ul>
               <li>
-              <a><Link to="/home/shistiiii/Documents/shistii/Kings_Canteen/src/Cart_Page.jsx"><img className="Cart_icon" src={Cart_logo} height={45} width={60}></img></Link></a>
-                <a><Link to="/"><img className="Logout_icon" src={Logout_logo} height={45} width={60}></img></Link> </a>
+                <a><Link to="/home/shistiiii/Documents/shistii/Kings_Canteen/src/Cart_Page.jsx"><img className="Cart_icon" src={Cart_logo} height={45} width={40} style={{marginRight: '70px'}}></img></Link></a>
+              </li>
+              <li className="Logout_icon">
 
-                </li>
+                <a><Link to="/"><img  src={Logout_logo} height={35} width={30}></img></Link> </a>
+              </li>
+              <li>
+
+                <a><Link to="/"><div className="Login_btn">Login </div> </Link> </a>
+              </li>
+
             </ul>
 
           </div>
